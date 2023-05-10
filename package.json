@@ -8,7 +8,8 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "tsc -w",
+    "watch": "tsc -w",
+    "start": "node dist/index.js",
     "dev": "nodemon dist/index.js",
     "build": "tsc",
     "build:digitalocean": "yarn install --production=false && yarn run build && rm -rf node_modules && yarn install --production --frozen-lockfile"
