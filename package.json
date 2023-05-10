@@ -1,13 +1,17 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "author": "Nilanjan Mandal <nilanjanmandal15@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "tsc -w",
     "dev": "nodemon dist/index.js",
-    "build": "tsc"
+    "build": "tsc",
+    "build:digitalocean": "yarn install --production=false && yarn run build && rm -rf node_modules && yarn install --production --frozen-lockfile"
   },
   "dependencies": {
     "cors": "^2.8.5",
