@@ -5,7 +5,9 @@
   "author": "Nilanjan Mandal <nilanjanmandal15@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.ts"
+    "start": "tsc -w",
+    "dev": "nodemon dist/index.js",
+    "build": "tsc"
   },
   "dependencies": {
     "cors": "^2.8.5",
